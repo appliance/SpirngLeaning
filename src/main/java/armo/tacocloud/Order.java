@@ -5,13 +5,14 @@ import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.validation.constraints.Digits;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
 @RequiredArgsConstructor
 public class Order {
-
+    // @NotBlank注解 String 不能是 null且去除两端空白字符后的长度（trimmed length）大于 0。
     @NotBlank(message="Name is required")
     private String name;
 
